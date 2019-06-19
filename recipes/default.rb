@@ -10,4 +10,10 @@ file '/tmp/test' do
   owner 'titus_alphonse_t'
   group 'titus_alphonse_t'
 end
+
+file "/etc/motd" do
+  content "IP Address: #{node['ipaddress']}
+Catch Phrase: #{node['catch_phrase']}
+"
+end
 #
